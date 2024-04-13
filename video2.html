@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const items = [
+            { name : 'Tivi 1', price:  100 },
+            { name : 'Tivi 2', price:  200 },
+            { name : 'Tivi 3', price:  300 },
+            { name : 'Tivi 4', price:  400 },
+            { name : 'Tivi 5', price:  500 },
+            { name : 'Tivi 6', price:  600 },
+        ]
+
+        const filtedItem = items.filter((item )=> {
+                return item.price >300;
+        });
+        console.log("loc item" , filtedItem);
+        const itemNames = items.map((item )=> {
+                return item.name;
+        });
+
+        console.log("name item ", itemNames);
+      
+        const finditem = items.find((item )=> {
+                return item.price > 300;
+        });
+
+        console.log("tìm item ", finditem);
+
+
+        items.forEach((item )=> {
+               console.log("for each name item ", item.name);
+        });
+
+
+        const total = items.reduce((current, item )=> {
+                return item.price + current; 
+        }, 0 );
+
+        console.log("total", total);
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let numbers = [1, 2, 3, 4, 5];
+        //Add an element at the end of the array
+        numbers.push(6);
+        console.log(numbers);
+        //Loop on all array elements
+        numbers.forEach((number)=>{
+            console.log(number);
+          });
+
+        //Access to the array element with its index
+        console.log(numbers[2]);
+        //Remove an array element with its index
+        numbers.splice(2, 2);
+        console.log(numbers);
+
+        //Filter array elements
+        let num = numbers.filter((number)=>{
+            return number > 2;
+        });
+        console.log(num);
+
+        //Transform each array element by applying a function on them
+        let num2 = numbers.map((number)=>{
+            return number * 2;
+        });
+        console.log(num2);
+
+    </script>
+</body>
+</html>
